@@ -5,7 +5,6 @@ import crosscorrelation as cc
 import Geometry as m
 import matplotlib.pyplot as plt
 import numpy as np
-from intersection import intersection
 
 x_bee=-480
 y_bee=-500
