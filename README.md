@@ -19,4 +19,4 @@ If you want to add 30dB of noise to the audios, just uncomment all this lines :
     
     #audio0=at.add_noise_to_audio(audio0,30)
 
-The cross-corelation will do it's magic and the result will be ploted, the bee is where the lines crosses
+The cross-corelation will do his magic and the result will be ploted, the bee is where the lines crosses
