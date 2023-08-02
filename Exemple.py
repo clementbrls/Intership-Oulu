@@ -6,11 +6,11 @@ import Geometry as m
 import matplotlib.pyplot as plt
 import numpy as np
 
-x_bee=-480
+x_bee=-480 #coordinate of the bee in mm
 y_bee=-500
 z_bee=0
 
-mic0=Mic(0,0,0)
+mic0=Mic(0,0,0) #coordinate of the mic in mm
 mic1=Mic(50,0,0)
 mic2=Mic(0,50,0)
 mic3=Mic(0,0,100)
