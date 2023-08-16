@@ -1,3 +1,4 @@
+import numpy as np
 class Mic():
     def __init__(self,x,y,z):
         self.x=x

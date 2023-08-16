@@ -15,7 +15,9 @@ mic1=Mic(50,0,0)
 mic2=Mic(0,50,0)
 mic3=Mic(0,0,100)
 
-audio=AudioSegment.from_file("./Abeille1.wav")
+audio=AudioSegment.from_file("./abeille.mp3")
+#affiche la frequence d'echantillonage 
+print(audio.frame_rate)
 
 #Generation audio
 audio0=at.gen_spacialize(audio,x_bee,y_bee,z_bee,mic0)
