@@ -1,7 +1,6 @@
 from pydub import AudioSegment
 from pydub.generators import WhiteNoise
 import numpy as np
-import matplotlib.pyplot as plt
 
 def add_noise_to_audio(audio, noise_level):
 

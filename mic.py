@@ -8,3 +8,5 @@ class Mic():
         return "Mic : x="+str(self.x)+" y="+str(self.y)+" z="+str(self.z)
     def dist(self,mic):
         return np.sqrt((self.x-mic.x)**2+(self.y-mic.y)**2+(self.z-mic.z)**2)
+    def get_pos(self):
+        return (self.x,self.y,self.z)
