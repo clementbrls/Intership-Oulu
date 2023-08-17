@@ -13,9 +13,8 @@ mic0=Mic(0,0,0) #coordinate of the mic in mm
 mic1=Mic(500,0,0)
 mic2=Mic(0,500,0)
 
-audio=AudioSegment.from_file("./abeille.mp3")
-#affiche la frequence d'echantillonage 
-print(audio.frame_rate)
+audio=AudioSegment.from_file("./bee.mp3")
+
 
 #Generation audio
 audio0=at.gen_spacialize(audio,x_bee,y_bee,0,mic0)
@@ -45,11 +44,9 @@ x2,y2 = m.whereItCouldBe(mic0,mic2,delta2)
 
 
 print("Coordonée réel : ",x_bee,y_bee)
-#print("Coordonée estimé : ",x_i,y_i)
 
 plt.plot(x1,y1,'r')
 plt.plot(x2,y2,'b')
-#affiche le point de l'abeille
 plt.plot(x_bee,y_bee,'go')
 plt.show()
 

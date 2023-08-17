@@ -4,45 +4,25 @@ import numpy as np
 
 def add_noise_to_audio(audio, noise_level):
 
-    # Générer du bruit blanc avec la même durée que le fichier audio
+    #generate white noise
     noise = WhiteNoise().to_audio_segment(duration=len(audio))
 
-    # Ajuster le niveau de bruit
+    #Ajust noise level
     noise = noise - (60 - noise_level)
 
-    # Ajouter le bruit au fichier audio
     noisy_audio = audio.overlay(noise)
 
-    # Exporter le fichier audio avec bruit
-    #noisy_audio.export(output_file, format='wav')
     return noisy_audio
 
     
 def extract_audio_second(start_ms,audio):
-
-    # Extract the first second of audio (1000 ms)
+    # Extract the a second of the audio (1000 ms)
     first_second = audio[start_ms:start_ms+1000]
-
-    # Export the first second of audio to the output file
     return first_second
 
-
-def apply_time_offset2(audio, offset_ms):
-
-    if offset_ms >= 0:
-        offset_audio = AudioSegment.silent(duration=offset_ms)
-        offset_audio = offset_audio + audio
-    else:
-        offset_ms = abs(offset_ms)
-        offset_audio = offset_audio[offset_ms:]
-
-    # Exporter le fichier audio avec l'offset
-    return offset_audio
-
 def apply_time_offset(audio, offset_ms):
-    #convertir offset_ms en nombre de frames
+    #convert the audio into a numpy array
     sig=np.array(audio.get_array_of_samples())
-
     offset_samples=int(offset_ms/1000*audio.frame_rate)
     sig=np.roll(sig,offset_samples)
     offset_audio=AudioSegment(sig.tobytes(),frame_rate=audio.frame_rate,sample_width=audio.sample_width,channels=audio.channels)

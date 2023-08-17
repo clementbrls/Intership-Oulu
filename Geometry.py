@@ -122,6 +122,7 @@ def whereItCouldBe3D(mic0, mic1, delta, res=400, distmin=None, distmax=None):
 
 
 def reduce(points1, points2, points3, lim=100):
+    #this function reduce the number of points to lim
     stop = False
     stop1=False
     stop2=False
@@ -233,4 +234,4 @@ def WhereItIs(mic0, mic1, mic2, mic3, delta1, delta2, delta3):
     
     points1, points2, points3 = reduce(points1, points2, points3, 50)
 
-    print("Coordonée estimé : ", find_intersect(points1, points2, points3))
+    return find_intersect(points1, points2, points3)
