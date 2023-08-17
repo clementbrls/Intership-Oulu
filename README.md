@@ -5,7 +5,7 @@ To start using the project just do :
 
     pip install -r .\requirements.txt
 
-You can use "Exemple3D.py" to test the program, just change the coordinates of the fake bee and the fakes mics and it will create audios that correspond to what the mics would have recorded
+You can use `Exemple3D.py` to test the program, just change the coordinates of the fake bee and the fakes mics and it will create audios that correspond to what the mics would have recorded
     
     x_bee= 30
     y_bee= -400
@@ -77,8 +77,7 @@ $$
 
 Next, points are generated on a flat circle using the parametric equations of a circle in 2D space:
 
-$$
-x = r \cos(t), \quad y = r \sin(t)
+$$x = r \cos(t), \quad y = r \sin(t)
 $$
 
 where $r$ is the radius of the circle and $t$ varies from $0$ to $2\pi$.
